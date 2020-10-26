@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Fourth = ({ name }) => {
+const Fourth = ({ name, setName }) => {
     return (<>
-        <div style={{ backgroundColor: 'grey', height: '50%', width: '50%', margin: 'auto' }}> { name } </div> 
+        <div style={{ backgroundColor: 'grey', height: '300px', width: '300px', margin: 'auto' }}> 
+            <input onChange={event => setName(event.target.value)}></input>
+        </div> 
     </>);
 };
 

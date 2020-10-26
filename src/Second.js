@@ -1,11 +1,11 @@
 import React from 'react';
 import Third from './Third';
 
-const Second = ({ name }) => {
+const Second = ({ name, setName }) => {
     return (<>
-        <div style={{ backgroundColor: 'red', height: '75%', width: '75%', margin: 'auto' }}> 
-        Segundo 
-        <Third name={name}></Third>
+        <div style={{ backgroundColor: 'red', height: '300px', width: '300px', margin: 'auto' }}> 
+            Segundo {name}
+            <input onChange={event => setName(event.target.value)}></input>
         </div> 
         
     </>);
