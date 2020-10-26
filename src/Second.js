@@ -1,7 +1,10 @@
-import React from 'react';
-import Third from './Third';
+import React, { useContext } from 'react';
+import Context from './context';
 
-const Second = ({ name, setName }) => {
+const Second = () => {
+
+    const { name, setName } = useContext(Context);
+
     return (<>
         <div style={{ backgroundColor: 'red', height: '300px', width: '300px', margin: 'auto' }}> 
             Segundo {name}
